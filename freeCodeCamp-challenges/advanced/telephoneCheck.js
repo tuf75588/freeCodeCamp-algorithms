@@ -7,7 +7,14 @@ function telephoneCheck(str) {
   let formattedArray = [...str];
   //if parens are at index 0 and 4;
   if (formattedArray.indexOf("(") === 0 && formattedArray.indexOf(")") === 4) {
-    console.log(formattedArray);
+    if (formattedArray.indexOf("-") === 8 || formattedArray.indexOf("") === 5) {
+      let numCheck = formattedArray
+        .map(num => parseInt(num))
+        .filter(x => x)
+        .every(num => Number.isInteger(num));
+      if (numCheck) return true;
+      else return false;
+    }
   }
   return formattedArray;
 }
