@@ -16,13 +16,23 @@ function telephoneCheck(str) {
       else return false;
     }
   }
-  //parens at index 1
+  //parens at index 2 and 6
+  if (
+    (formattedArray.indexOf("(") === 2 && formattedArray.indexOf(")") === 6) ||
+    (formattedArray.indexOf("(") === 1 && formattedArray.indexOf(")") === 5)
+  ) {
+    //do some stuff
+    formattedArray;
+    console.log(copy.indexOf("-"));
+  }
+  return formattedArray;
 }
 
-console.log(telephoneCheck("1-(555)-555-5555")); //should return true
+console.log(telephoneCheck("1(555)-555-5555")); //should return true
 console.log(telephoneCheck("555-5555")); // should return false
 console.log(telephoneCheck("-1 (757) 622-7382")); //should return false
 console.log(telephoneCheck("(555)555-5555")); //should return true
 console.log(telephoneCheck("10 (757) 622-7382")); //should return true
 console.log(telephoneCheck("1 555)555-5555")); //should return true
-console.log(telephoneCheck("1 (555) 555-5555")); //should return true
+console.log(telephoneCheck("1 (555) 555-5555 ")); //should return true
+console.log(telephoneCheck("1(555)555-5555")); //should return true
