@@ -16,7 +16,7 @@ function telephoneCheck(str) {
       else return false;
     }
   }
-  return formattedArray;
+  //parens at index 1
 }
 
 console.log(telephoneCheck("1-(555)-555-5555")); //should return true
@@ -25,3 +25,4 @@ console.log(telephoneCheck("-1 (757) 622-7382")); //should return false
 console.log(telephoneCheck("(555)555-5555")); //should return true
 console.log(telephoneCheck("10 (757) 622-7382")); //should return true
 console.log(telephoneCheck("1 555)555-5555")); //should return true
+console.log(telephoneCheck("1 (555) 555-5555")); //should return true
