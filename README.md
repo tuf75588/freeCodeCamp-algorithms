@@ -1,3 +1,3 @@
 # freeCodeCamp-algorithms
 
-A walkthrough of all the algorithm challenges on freecodecamp.org
+A walkthrough of all the algorithm challenges on freecodecamp.org.  Updated periodically. 
